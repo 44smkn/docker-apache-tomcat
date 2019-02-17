@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    container_name: httpd
+    build: ./httpd
+    ports:
+    - "9080:80"
+    - "9443:443"
+  app:
+    container_name: tomcat
+    build: ./tomcat
+    ports:
+    - "8080:8080"
